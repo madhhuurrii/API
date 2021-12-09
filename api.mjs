@@ -5,9 +5,12 @@ var api = "http://localhost:3000/data"
 // function myfunc(event){
 // const apis = document.getElementById("api").value;
   
-    import fetch from "node-fetch"
+import fetch from "node-fetch"
 
-fetch(api)
+fetch(api,{
+    method: "GET",
+    headers: {"content-type": "application/json;charset=UT-8"}
+})
 .then((res)=>{
     return res.json();
 })
