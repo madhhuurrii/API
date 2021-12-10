@@ -7,10 +7,7 @@ var api = "http://localhost:3000/data"
   
 import fetch from "node-fetch"
 
-fetch(api,{
-    method: "GET",
-    headers: {"content-type": "application/json;charset=UT-8"}
-})
+fetch(api)
 .then((res)=>{
     return res.json();
 })
