@@ -1,30 +1,13 @@
-import requests
 import json 
+from urllib.request import urlopen
+  
+url = "http://localhost:3000/data"
+  
+api = urlopen(url)
+  
+res = json.loads(api.read())
 
-api = '''
-        {
-    "data" :[{
-       "id":1,
-       "name" : "madhuri"
-    },{
-        "id":2,
-        "name":"esha"
-    },{
-        "id":4,
-        "name": "latha"
-    },{
-        "id":3,
-        "name":"rama"
-    }]
-}'''
+# sorted_json_data = json.dumps(data_json, sort_keys=True) #error line
+res.sort(key=lambda x: x['id'])
 
-# res = requests.get(api)
-res = json.loads(api)
-
-result = sorted(res['data'], key=lambda x:x['id'])
-
-
-
-
-
-print(result)
+print(res)
