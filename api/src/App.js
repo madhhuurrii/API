@@ -32,9 +32,27 @@ function App() {
     
   return (
     <div className="App">
+    <center>
+    <table className="App">
+      <tr>
+        <th><h1>ID &nbsp;</h1></th>
+        <th><h1>Name &nbsp;</h1></th>
+      </tr>
+      <tr>
+        <td>{
+         data && data.length>0 && data.map((item)=><h2>{item.id} &nbsp;</h2>)
+       }</td>
+       <td>
        {
-         data && data.length>0 && data.map((item)=><p>{item.id} &nbsp;{item.name}</p>)
-       }
+         data && data.length>0 && data.map((item)=><h2>{item.name} &nbsp;</h2>)
+       } 
+       </td>
+      </tr>
+    </table>
+    </center>
+     {/* {
+         data && data.length>0 && data.map((item)=><h2>{item.id} &nbsp; {item.name}</h2>)
+       } */}
     </div>
   );
 }
