@@ -1,7 +1,7 @@
 var api = "http://localhost:3000/data"
 // var api
 // api.addEventListener('submit',myfunc)
-// json-server ---watch db.json
+// json-server --watch db.json
 // function myfunc(event){
 // const apis = document.getElementById("api").value;
   
