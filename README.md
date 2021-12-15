@@ -3,9 +3,9 @@
 ROLE : INFORMATION ENGINEER
 
 # JSON ENDPOINT 
-[JSON DATA]()
+- [JSON DATA](./db.json)
 
 # CODE IMPLEMETATION 
-[JAVASCRIPT]()
-[PYTHON]()
-[NODE.JS]()
+- [JAVASCRIPT](./javascript/api.mjs)
+- [PYTHON](./python/api.py)
+- [NODE.JS](./nodejs/apis.js)
