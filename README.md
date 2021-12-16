@@ -9,10 +9,9 @@ ROLE : INFORMATION ENGINEER
 # CODE IMPLEMETATION 
 - [JAVASCRIPT](./javascript/api.mjs)
 - [PYTHON](./python/api.py)
-- [NODE.JS](./nodejs/apis.js)
+- [NODE.JS](./nodejs/apis.mjs)
 
 ## QUESTION 3
 
 # REACT IMPLEMENTATION
 - [REACT SOURCE CODE](./api/src/App.js)
-- [REACT HOSTED PAGE]()
