@@ -1,0 +1,1 @@
+curl -o db.json http://localhost:3000/data  -H 'content-type : application/json'
