@@ -1,0 +1,115 @@
+# Symbl API Documentation
+
+## Introduction 
+Symbl API uses the RESTful Web API architecture. This means the HTTP methods are used to access resources via URL and transmit JSON based data.
+Symbl API follows secure requests i.e `https`, not `http` and returns JSON-encoded responses.
+
+### Base URL :
+`https://api.symbl.ai/v1`
+### Endpoint :
+`/v1/conversations`
+
+## Authentication 
+Symbl APIs uses OAuth 2.0 protocol, In order to authenticate you will need an access token. The Access tokens can be generated in a two step process.
+
+1. Obtain API Credentials from Symbl Platform
+2. Using these credentials, generate the Access token
+
+## GET Insights
+An Insight is a form of question or text that needs immediate understanding of significance of an event or action in a conversation.
+
+The Insight API returns a JSON which consists of text, ususally of type question in a conversation.
+
+### HTTP Request 
+```
+https://api.symbl.ai/v1/conversations/{conversationId}/insights
+```
+
+### Sample API call : cURL
+```curl
+curl --location --request GET 'https://api.symbl.ai/v1/conversations/5526632414576640/insights' \
+  --header 'x-api-key:
+  # The colon prevents curl from asking for a password.
+```
+### Response 
+```json
+{
+"insights": [
+
+{
+"id": "5288719680536576",
+"text": "How was the difference there?",
+"type": "question",
+"score": 0.9827664988519251,
+"messageIds": [
+"5549178644070400"
+
+],
+"from": {}
+},
+{
+"id": "5660876935790592",
+"text": "Did you want navy blue or royal blue?",
+"type": "question",
+"score": 0.9921441245153866,
+"messageIds": [
+"5213026535866368"
+],
+"from": {}
+},
+{
+"id": "5810274487500800",
+"text": "What color did you want the New Yorker in?",
+"type": "question",
+"score": 0.9963072322074725,
+"messageIds": [
+"5861300292812800"
+
+],
+"from": {}
+},
+{
+"id": "6037045170405376",
+"text": "Sure what I need to do?",
+"type": "question",
+"score": 0.9081042802022934,
+"messageIds": [
+"5191824211705856"
+],
+"from": {}
+},
+{
+"id": "6098067562430464",
+
+"text": "Okay, what ZIP code are you located in 1940, 6?",
+"type": "question",
+"score": 0.9296213757388787,
+"messageIds": [
+"5582660145512448"
+],
+"from": {}
+},
+{
+"id": "6404582466912256",
+"text": "Yes, ma'am and Mr. Johnson, do you have the Parker scarf in light blue with you now?",
+"type": "question",
+
+"score": 0.9915077116276262,
+"messageIds": [
+"4936662100475904"
+],
+"from": {}
+},
+]
+}
+
+```
+### Response Object 
+| Field        | Type   | Description                                                 |
+| -------------|--------|-------------------------------------------------------------|
+| `id`         | string | A unique identifier for the insights.                       |
+| `text`       | string | Insight text                                                |
+| `type`       | string | Insight response type                                       |
+| `score`      | number | Score of generated insights                                 |
+| `messageIds` | string | A unique message identifier for the corresponding message   |
+| `from`       | object | Can have information of speaker in key-value pair           |
