@@ -164,7 +164,7 @@ curl --location --request GET 'https://api.symbl.ai/v1/conversations/55266324145
 | Field        | Type   | Description                                                 |
 | -------------|--------|-------------------------------------------------------------|
 | `id`         | string | A unique identifier for the insights.                       |
-| `text`       | string | Insight text                                                |
+| `text`       | string | conversation text                                           |
 | `type`       | string | Insight response type                                       |
 | `score`      | number | Score of generated insights                                 |
 | `messageIds` | string | A unique message identifier for the corresponding message   |
@@ -181,5 +181,5 @@ POSTMAN is an API client used to develop, test, share and document APIs. It is u
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/13497402-108cafc3-da45-4b00-97fe-4819894f58bb?action=collection%2Ffork&collection-url=entityId%3D13497402-108cafc3-da45-4b00-97fe-4819894f58bb%26entityType%3Dcollection%26workspaceId%3D5f563cfe-42ef-4344-a98a-eae13183fb7c)
 
-Symbl APIs can be used for testing in Postman, but before testing ensure that you have `appId` and `appSecret` to authenticate the API requests.
+Symbl APIs can be tested in Postman, but before testing ensure that you have `appId` and `appSecret` to authenticate the API requests.
 Symbl public collection in Postman has preconfigured API request that can help you get started in one click!
