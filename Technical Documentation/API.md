@@ -1,7 +1,7 @@
 # Symbl API Documentation
 ## Get Started
-- Introduction
-- Authentication
+- [Introduction](#introduction)
+- [Authentication](#authentication)
 - GET Insights
   - HTTP Request
   - Sample API Call : cURL
