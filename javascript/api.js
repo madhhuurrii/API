@@ -2,11 +2,13 @@ var api = 'http://localhost:3000/data'
 
 // json-server --watch db.json
 
-import fetch from 'node-fetch'
-
-fetch(api)
+// import fetch from 'node-fetch'
+function fetchApi(){
+  fetch(api)
   .then((res) => {
+    
     return res.json()
+    
   })
   .then((json) => {
     json.sort((a, b) => {
@@ -19,8 +21,12 @@ fetch(api)
       }
     })
     console.log(json)
+   
   })
   .catch((err) => {
     console.log('Error!')
   })
-// }
+
+
+}
+ 
