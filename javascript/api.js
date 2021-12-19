@@ -3,7 +3,7 @@ var api = 'http://localhost:3000/data'
 // json-server --watch db.json
 
 // import fetch from 'node-fetch'
-function fetchApi(){
+
   fetch(api)
   .then((res) => {
     
@@ -27,6 +27,3 @@ function fetchApi(){
     console.log('Error!')
   })
 
-
-}
- 
