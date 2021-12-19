@@ -3,11 +3,11 @@
 - [Introduction](#introduction)
 - [Authentication](#authentication)
 - [GET Insights](#get-insights)
-  - [HTTP Request](#http-reqest)
-  - [Sample API Call : cURL](#sample-api-call-curl)
-  - [Response](#response)
-  - [Response Object](#response-object)
-  - [Possible Errors](#possible-errors)
+  - [HTTP Request](#1-http-request)
+  - [Sample API Call : cURL](#2-sample-api-call-curl)
+  - [Response](#3-response)
+  - [Response Object](#4-response-object)
+  - [Possible Errors](#5-possible-errors)
 - Testing
 ## Introduction 
 Symbl API uses the RESTful Web API architecture. This means the HTTP methods are used to access resources via URL and transmit JSON based data.
@@ -67,19 +67,19 @@ An Insight is a form of question or text that needs immediate understanding of s
 
 The Insights API returns a JSON which consists of text, ususally of type question in a conversation.
 
-### HTTP Request 
+### 1. HTTP Request 
 ```
 GET https://api.symbl.ai/v1/conversations/{conversationId}/insights
 ```
 
-### Sample API call : cURL
+### 2. Sample API call : cURL
 ```cURL
 curl --location --request GET 'https://api.symbl.ai/v1/conversations/5526632414576640/insights' \
   --header 'x-api-key:
   # The colon prevents curl from asking for a password.
 ```
 
-### Response 
+### 3. Response 
 ```json
 {
 "insights": [
@@ -153,7 +153,7 @@ curl --location --request GET 'https://api.symbl.ai/v1/conversations/55266324145
 
 ```
 
-### Response Object 
+### 4. Response Object 
 | Field        | Type   | Description                                                 |
 | -------------|--------|-------------------------------------------------------------|
 | `id`         | string | A unique identifier for the insights.                       |
@@ -163,7 +163,7 @@ curl --location --request GET 'https://api.symbl.ai/v1/conversations/55266324145
 | `messageIds` | string | A unique message identifier for the corresponding message   |
 | `from`       | object | Can have information of speaker in key-value pair           |
 
-### Possible Errors
+### 5. Possible Errors
 | Error Code        | Description                                             |
 | ------------------|---------------------------------------------------------|
 | 401 Unauthorized  | The access token is invalid or has been revoked.        |
