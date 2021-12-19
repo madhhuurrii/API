@@ -71,10 +71,12 @@ The Insights API returns a JSON which consists of text, ususally of type questio
 ```
 GET https://api.symbl.ai/v1/conversations/{conversationId}/insights
 ```
+The `{conversationId}` mentioned in the above text can be obtained by following the instruction in [POST Text API](https://docs.symbl.ai/docs/async-api/overview/text/post-text)
+In this request the `conversationId` is mentioned as `5526632414576640`, replace this in the actual link.
 
 ### 2. Sample API call : cURL
 ```
-curl --location --request GET 'https://api.symbl.ai/v1/conversations/{conversationId}/insights' \
+curl --location --request GET 'https://api.symbl.ai/v1/conversations/5526632414576640/insights' \
   --header 'x-api-key:'
   # The colon prevents curl from asking for a password.
   
@@ -176,6 +178,8 @@ curl --location --request GET 'https://api.symbl.ai/v1/conversations/{conversati
 
 ## Testing using Postman 
 POSTMAN is an API client used to develop, test, share and document APIs. It is used for backend testing where we enter the end-point URL, it sends the request to the server and receives the response back from the server.
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/13497402-108cafc3-da45-4b00-97fe-4819894f58bb?action=collection%2Ffork&collection-url=entityId%3D13497402-108cafc3-da45-4b00-97fe-4819894f58bb%26entityType%3Dcollection%26workspaceId%3D5f563cfe-42ef-4344-a98a-eae13183fb7c)
 
 Symbl APIs can be used for testing in Postman, but before testing ensure that you have `appId` and `appSecret` to authenticate the API requests.
 Symbl public collection in Postman has preconfigured API request that can help you get started in one click!
