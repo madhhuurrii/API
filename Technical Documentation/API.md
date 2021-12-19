@@ -2,12 +2,12 @@
 ## Get Started
 - [Introduction](#introduction)
 - [Authentication](#authentication)
-- GET Insights
-  - HTTP Request
-  - Sample API Call : cURL
-  - Response
-  - Response Object
-  - Possible Errors
+- [GET Insights](#get-insights)
+  - [HTTP Request](#http-reqest)
+  - [Sample API Call : cURL](#sample-api-call-curl)
+  - [Response](#response)
+  - [Response Object](#response-object)
+  - [Possible Errors](#possible-errors)
 - Testing
 ## Introduction 
 Symbl API uses the RESTful Web API architecture. This means the HTTP methods are used to access resources via URL and transmit JSON based data.
