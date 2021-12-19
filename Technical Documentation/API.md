@@ -1,5 +1,14 @@
 # Symbl API Documentation
-
+## Get Started
+- Introduction
+- Authentication
+- GET Insights
+  - HTTP Request
+  - Sample API Call : cURL
+  - Response
+  - Response Object
+  - Possible Errors
+- Testing
 ## Introduction 
 Symbl API uses the RESTful Web API architecture. This means the HTTP methods are used to access resources via URL and transmit JSON based data.
 Symbl API follows secure requests i.e `https`, not `http` and returns JSON-encoded responses.
@@ -162,5 +171,6 @@ curl --location --request GET 'https://api.symbl.ai/v1/conversations/55266324145
 
 ## Testing using Postman 
 POSTMAN is an API client used to develop, test, share and document APIs. It is used for backend testing where we enter the end-point URL, it sends the request to the server and receives the response back from the server.
+
 Symbl APIs can be used for testing in Postman, but before testing ensure that you have `appId` and `appSecret` to authenticate the API requests.
 Symbl public collection in Postman has preconfigured API request that can help you get started in one click!
