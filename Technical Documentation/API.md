@@ -73,11 +73,16 @@ GET https://api.symbl.ai/v1/conversations/{conversationId}/insights
 ```
 
 ### 2. Sample API call : cURL
-```cURL
-curl --location --request GET 'https://api.symbl.ai/v1/conversations/5526632414576640/insights' \
-  --header 'x-api-key:
-  # The colon prevents curl from asking for a password.
 ```
+curl --location --request GET 'https://api.symbl.ai/v1/conversations/{conversationId}/insights' \
+  --header 'x-api-key:'
+  # The colon prevents curl from asking for a password.
+  
+```
+#### Request Headers
+| Header Name        | Description   |
+| -------------------|------------------------------------------------------------------|
+| `x-api-key`        | JWT token you get from [authentication process](#authentication) |
 
 ### 3. Response 
 ```json
