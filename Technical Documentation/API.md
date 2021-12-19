@@ -4,21 +4,59 @@
 Symbl API uses the RESTful Web API architecture. This means the HTTP methods are used to access resources via URL and transmit JSON based data.
 Symbl API follows secure requests i.e `https`, not `http` and returns JSON-encoded responses.
 
-### Base URL :
-`https://api.symbl.ai/v1`
-### Endpoint :
-`/v1/conversations`
+|     Base URL              |      Endpoint       | 
+| --------------------------|---------------------|
+| `https://api.symbl.ai/v1` | `/v1/conversations` |
 
 ## Authentication 
 Symbl APIs uses OAuth 2.0 protocol, In order to authenticate you will need an access token. The Access tokens can be generated in a two step process.
 
-1. Obtain API Credentials from Symbl Platform
-2. Using these credentials, generate the Access token
+#### 1. Obtain API Credentials from Symbl Platform
+- Log In, If you are already have an account in Symbl platform or else Register.
+- After logging in, you will be redirected to the home page, here copy your App ID and App secret.
+  
+  ![image](https://user-images.githubusercontent.com/64744084/146662224-79216d24-27d6-4580-8c29-22bd9a9a6f89.png)
 
-## GET Insights
+ App Credential are always required to generate the Access token. 
+           
+ #### 2. Using these credentials, generate the Access token
+ - Next, to generate Access Token make POST request to the following endpoint
+ `https://api.symbl.ai/oauth2/token:generate`
+  for example using cURL:
+  ```curl
+  curl -k -X POST "https://api.symbl.ai/oauth2/token:generate" \
+     -H "accept: application/json" \
+     -H "Content-Type: application/json" \
+     -d $'{
+      "type" : "application",
+      "appId": "'$APP_ID'",
+      "appSecret": "'$APP_SECRET'"
+    }'
+  ```
+  Here replace the `$APP_ID` and `$APP_SECRET` with acutal App Id and App Secret respectively.
+ - After succesful completion, a message apears as shown below
+ ```
+ {
+   "accessToken": "your_accessToken",
+   "expiresIn": 86400
+ }
+ ```
+ with following parameters:
+|  Parameter      |    Description       | 
+| --------------- |----------------------|
+|  `accessToken`  |  Authorization Token |
+|  `expiresIn`    | Duration in seconds in which the access token is valid |
+
+- Else possible errors can be displayed
+
+| Error Codes          |    Description       | 
+| ---------------------|----------------------|
+|  `401 Unauthorized`  |  The `appId` or `appSecret` is invalid|
+
+## Insights
 An Insight is a form of question or text that needs immediate understanding of significance of an event or action in a conversation.
 
-The Insight API returns a JSON which consists of text, ususally of type question in a conversation.
+The Insights API returns a JSON which consists of text, ususally of type question in a conversation.
 
 ### HTTP Request 
 ```
@@ -26,11 +64,12 @@ https://api.symbl.ai/v1/conversations/{conversationId}/insights
 ```
 
 ### Sample API call : cURL
-```curl
+```cURL
 curl --location --request GET 'https://api.symbl.ai/v1/conversations/5526632414576640/insights' \
   --header 'x-api-key:
   # The colon prevents curl from asking for a password.
 ```
+
 ### Response 
 ```json
 {
@@ -104,6 +143,7 @@ curl --location --request GET 'https://api.symbl.ai/v1/conversations/55266324145
 }
 
 ```
+
 ### Response Object 
 | Field        | Type   | Description                                                 |
 | -------------|--------|-------------------------------------------------------------|
@@ -113,3 +153,9 @@ curl --location --request GET 'https://api.symbl.ai/v1/conversations/55266324145
 | `score`      | number | Score of generated insights                                 |
 | `messageIds` | string | A unique message identifier for the corresponding message   |
 | `from`       | object | Can have information of speaker in key-value pair           |
+
+### Possible Errors
+| Error Code        | Description                                             |
+| ------------------|---------------------------------------------------------|
+| 401 Unauthorized  | The access token is invalid or has been revoked.        |
+
