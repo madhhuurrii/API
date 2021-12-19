@@ -8,7 +8,7 @@
   - [Response](#3-response)
   - [Response Object](#4-response-object)
   - [Possible Errors](#5-possible-errors)
-- [Testing](#testing)
+- [Testing](#testing-using-postman)
 ## Introduction 
 Symbl APIs uses the RESTful Web API architecture. This means the HTTP methods are used to access resources via URL and transmit JSON based data.
 Symbl API follows secure requests i.e `https`, not `http` and returns JSON-encoded responses.
