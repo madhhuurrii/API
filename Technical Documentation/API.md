@@ -69,7 +69,7 @@ The Insights API returns a JSON which consists of text, ususally of type questio
 
 ### HTTP Request 
 ```
-https://api.symbl.ai/v1/conversations/{conversationId}/insights
+GET https://api.symbl.ai/v1/conversations/{conversationId}/insights
 ```
 
 ### Sample API call : cURL
