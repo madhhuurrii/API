@@ -3,15 +3,15 @@
 ROLE : INFORMATION ENGINEER
 
 ## QUESTION 2
-# JSON ENDPOINT 
+### JSON ENDPOINT 
 - [JSON DATA](./db.json)
 
-# CODE IMPLEMETATION 
+### CODE IMPLEMETATION 
 - [JAVASCRIPT](./javascript/api.mjs)
 - [PYTHON](./python/api.py)
 - [NODE.JS](./nodejs/apis.mjs)
 
 ## QUESTION 3
 
-# REACT IMPLEMENTATION
+### REACT IMPLEMENTATION
 - [REACT SOURCE CODE](./api/src/App.js)
