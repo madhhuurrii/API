@@ -6,7 +6,7 @@ ROLE : INFORMATION ENGINEER
 ### JSON ENDPOINT 
 - [JSON DATA](./db.json)
 
-### CODE IMPLEMETATION 
+### CODE IMPLEMENTATION 
 - [JAVASCRIPT](./javascript/api.mjs)
 - [PYTHON](./python/api.py)
 - [NODE.JS](./nodejs/apis.mjs)
